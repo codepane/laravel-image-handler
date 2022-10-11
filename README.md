@@ -7,7 +7,7 @@ Handle image in multiple different size with optimization.
 ### Installation steps
 ```
 composer require codepane/laravel-image-handler
-php artisan vendor:publish --provider="codepane\LaravelImageHandler\ImageHandlerServiceProvider" --tag=config
+php artisan vendor:publish --provider="codepane\LaravelImageHandler\ImageHandlerServiceProvider"
 ```
 
 ### Configuration
