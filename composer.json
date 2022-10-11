@@ -1,0 +1,30 @@
+{
+    "name": "codepane/laravel-image-handler",
+    "description": "Handle image in multiple different size with optimization.",
+    "type": "library",
+    "require": {
+        "intervention/image": "^2.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Codepane\\LaravelImageHandler\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codepane\\LaravelImageHandler\\ImageHandlerServiceProvider"
+            ],
+            "aliases": {
+                "ImageHandler": "Codepane\\LaravelImageHandler\\Facades\\ImageHandler"
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "Sanjay Prajapati",
+            "email": "sanjay14prajapati1998@gmail.com"
+        }
+    ]
+}
