@@ -1,6 +1,6 @@
 {
     "name": "codepane/laravel-image-handler",
-    "description": "Handle image in multiple different size with optimization.",
+    "description": "Optimize and store images in multiple sizes easily.",
     "type": "library",
     "require": {
         "intervention/image": "^2.7"

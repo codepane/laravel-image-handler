@@ -1,7 +1,7 @@
 
 # Laravel Image Handler
 
-Handle image in multiple different size with optimization.
+Optimize and store images in multiple sizes easily.
 
 
 ### Installation steps
@@ -12,14 +12,14 @@ php artisan vendor:publish --provider="codepane\LaravelImageHandler\ImageHandler
 
 ### Configuration
 
-* After installation done once you can see imagehandler.php under the config dirctory.
-* You can udpate dimensions, format and quality as per your need from configuration file.
-* You can also add new dimension.
+* After installation is done once you can see imagehandler.php under the config directory.
+* You can update dimensions, format, and quality as per your need from a configuration file.
+* You can also add a new dimension.
 
 
 
 ## Usage
-Lets deep dive into this package for how to use it
+Let's deep dive into this package for how to use it
 
 ### Store Image
 ```
@@ -27,10 +27,10 @@ use ImageHandler;
 
 public function store()
 {
-    // its take default file name as it is
+    // its takes the default file name as it is
     ImageHandler::store($request->file);
 
-    // in 2nd argument you can pass your custom file name with or without path
+    // in 2nd argument you can pass your custom file name with or without the path
     ImageHandler::store($request->file, 'file_name_with_or_without_path');
 }
 ```
@@ -41,10 +41,10 @@ use ImageHandler;
 
 public function get()
 {
-    // this will return original image
+    // this will return the original image
     ImageHandler::get('original_file_name');
 
-    // pass dimension as second argument for get specific dimension of file
+    // pass dimension as the second argument to get a specific dimension of the file
     ImageHandler::get('original_file_name', 'sm');
 }
 ```
@@ -64,5 +64,5 @@ public function delete()
 
 Contributions are always welcome!
 
-- Make pull request if you have to contribute for this lovely library!
+- Make a pull request if you have to contribute to this lovely library!
 - We will review and pull your request.
