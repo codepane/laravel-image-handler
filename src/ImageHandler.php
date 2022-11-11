@@ -3,6 +3,7 @@
 namespace Codepane\LaravelImageHandler;
 
 use Exception;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManager;
 
@@ -30,6 +31,8 @@ class ImageHandler
         /* Creating a file name for the original image. */
         $fileOriginalName = $this->makeFileName($imgPath, $time, 'orig');
 
+        $this->makeDirectoryIfDoesNotExist($storageDisk, $fileOriginalName);
+
         $this->storeImg($storageDisk, $fileOriginalName, file_get_contents($image));
 
         foreach($dimensions as $key => $dimension) {
@@ -45,6 +48,24 @@ class ImageHandler
         }
 
         return $fileOriginalName;
+    }
+
+    /**
+     * make a directory if does not exist
+     *
+     * @param string $storageDisk
+     * @param string $fileName
+     *
+     * @return void
+     */
+    public function makeDirectoryIfDoesNotExist(string $storageDisk, string $fileName)
+    {
+        $directory = pathinfo($fileName, PATHINFO_DIRNAME);
+
+        if(($storageDisk == 'local' || $storageDisk == 'public') && !Storage::disk($storageDisk)->exists($directory)) {
+            $dirPath = Storage::disk($storageDisk)->path($directory);
+            File::makeDirectory($dirPath, 0777);
+        }
     }
 
     /**
