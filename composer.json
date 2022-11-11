@@ -6,7 +6,7 @@
     "require": {
         "intervention/image": "^2.7"
     },
-    "readme": "README.md"
+    "readme": "README.md",
     "license": "MIT",
     "autoload": {
         "psr-4": {
