@@ -7,7 +7,7 @@ Optimize and store images in multiple sizes easily.
 ### Installation steps
 ```
 composer require codepane/laravel-image-handler
-php artisan vendor:publish --provider="codepane\LaravelImageHandler\ImageHandlerServiceProvider"
+php artisan vendor:publish --provider="Codepane\LaravelImageHandler\ImageHandlerServiceProvider"
 ```
 
 ### Configuration
