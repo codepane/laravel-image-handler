@@ -2,7 +2,12 @@
     "name": "codepane/laravel-image-handler",
     "description": "Optimize and store images in multiple sizes easily.",
     "type": "library",
-    "version": "0.4",
+    "version": "0.5",
+    "keywords": [
+        "image",
+        "laravel",
+        "image-handler"
+    ],
     "require": {
         "intervention/image": "^2.7"
     },
@@ -28,5 +33,6 @@
             "name": "Sanjay Prajapati",
             "email": "sanjay14prajapati1998@gmail.com"
         }
-    ]
+    ],
+    "prefer-stable": true
 }

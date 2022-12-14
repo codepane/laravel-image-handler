@@ -49,6 +49,17 @@ public function get()
 }
 ```
 
+### Get Image Name
+```
+use ImageHandler;
+
+public function get()
+{
+    // pass dimension as the second argument to get a specific dimension of the file name
+    ImageHandler::getFileName('original_file_name', 'sm');
+}
+```
+
 ### Delete Image
 ```
 use ImageHandler;

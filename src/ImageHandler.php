@@ -113,9 +113,26 @@ class ImageHandler
      */
     public function get(string $fileName, string $dimension = 'orig')
     {
-        $fileName = $this->getFileName($fileName, $dimension);
+        if($dimension != 'orig')
+            $fileName = $this->getImgName($fileName, $dimension);
 
         return Storage::disk($this->getStorageDisk())->get($fileName);
+    }
+
+    /**
+     * It returns the file name of the image
+     *
+     * @param string fileName The name of the file you want to get.
+     * @param string dimension The dimension of the image you want to get.
+     *
+     * @return The file name of the image.
+     */
+    public function getFileName(string $fileName, string $dimension = 'orig')
+    {
+        if($dimension != 'orig')
+            $fileName = $this->getImgName($fileName, $dimension);
+
+        return $fileName;
     }
 
 
@@ -135,7 +152,7 @@ class ImageHandler
         $this->removeFile($storageDisk, $fileName);
 
         foreach($dimensions as $dimension => $val) {
-            $fileName = $this->getFileName($fileName, $dimension);
+            $fileName = $this->getImgName($fileName, $dimension);
 
             $this->removeFile($storageDisk, $fileName);
         }
