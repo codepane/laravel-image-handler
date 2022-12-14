@@ -97,15 +97,14 @@ trait ImageConfiguration
     }
 
     /**
-     * It takes a file name, splits it into two parts, and then returns the file name with the
-     * dimension added to it
+     * It takes a file name, splits it into two parts, and then returns the file name with the dimension added to it
      *
      * @param string fileName The file name of the image.
      * @param string dimension The dimension of the image.
      *
      * @return string The file name with the dimension.
      */
-    public function getFileName(string $fileName, string $dimension)
+    public function getImgName(string $fileName, string $dimension)
     {
         /* Getting the file extension of the file name. */
         $fileExt = $this->getFormat();
