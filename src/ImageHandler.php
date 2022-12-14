@@ -47,7 +47,9 @@ class ImageHandler
             $this->storeImg($storageDisk, $fileName, $optimizedImg);
         }
 
-        return $fileOriginalName;
+        $fileBaseName = pathinfo($fileOriginalName, PATHINFO_BASENAME);
+
+        return $fileBaseName;
     }
 
     /**
