@@ -93,6 +93,8 @@ trait ImageConfiguration
 
         $format = $this->getFormat($imageName, $dimension);
 
+        $fileName = str_replace([' ', '.'], '-', $fileName);
+
         return $fileName . '.' . $format;
     }
 
